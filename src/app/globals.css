@@ -157,3 +157,21 @@
 html {
   font-family: 'Inter', sans-serif;
 }
+
+@keyframes pulse-left-right {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-6px); }
+}
+
+@keyframes pulse-right-left {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(6px); }
+}
+
+.animate-pulse-left {
+  animation: pulse-left-right 1.5s ease-in-out infinite;
+}
+
+.animate-pulse-right {
+  animation: pulse-right-left 1.5s ease-in-out infinite;
+}

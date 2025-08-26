@@ -32,7 +32,7 @@ export default function RootLayout({
         const script = document.createElement("script");
         script.src = "https://www.chatbase.co/embed.min.js";
         script.id = "Ocnxh8GmT_YZhUBeJg2pD";
-        script.domain = "www.chatbase.co";
+
         document.body.appendChild(script);
         setTimeout(() => {
         const iframe = document.querySelector('#chatbase-bubble-button') as HTMLElement;
