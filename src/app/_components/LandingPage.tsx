@@ -1,5 +1,8 @@
+"use client"
+
 import React from 'react'
 import Resume from './Resume'
+import { Button } from '../../components/ui/button'
 
 function LandingPage() {
   return (
@@ -13,8 +16,11 @@ function LandingPage() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
-            <div className="mt-5">
+            <div className="mt-5 flex gap-4">
             <Resume />
+            <a href="/contact">
+                  <Button>Contact Saarthak</Button>
+            </a>
             </div>
           </div>
         </div>
