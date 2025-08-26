@@ -8,6 +8,7 @@ function Navbar() {
         <a href="#home" className="text-black hover:text-blue-700 transition-colors duration-300">Home</a>
         <a href="#about" className="text-black hover:text-blue-700 transition-colors duration-300">About</a>
         <a href="#projects" className="text-black hover:text-blue-700 transition-colors duration-300">Projects</a>
+        <a href="#blogs" className="text-black hover:text-blue-700 transition-colors duration-300">Blogs</a>
         <a href="#contact" className="text-black hover:text-blue-700 transition-colors duration-300">Contact</a> 
         </div>
     </nav>
