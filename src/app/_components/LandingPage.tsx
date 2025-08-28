@@ -3,6 +3,7 @@
 import React from 'react'
 import Resume from './Resume'
 import { Button } from '../../components/ui/button'
+import SocialMedia from './SocialMedia'
 
 function LandingPage() {
   return (
@@ -21,6 +22,9 @@ function LandingPage() {
             <a href="/contact">
                   <Button>Contact Saarthak</Button>
             </a>
+            <div className="scale-140 ml-70 mt-2">
+            <SocialMedia />
+            </div>
             </div>
           </div>
         </div>

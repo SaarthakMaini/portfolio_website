@@ -8,7 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormField, FormItem, FormControl } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-
+import { useRouter } from "next/navigation";
 import SocialMedia from './SocialMedia'
 
 const formSchema = z.object({
@@ -19,6 +19,7 @@ const formSchema = z.object({
 });
 
 const Contact = () => {
+  const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -29,10 +30,27 @@ const Contact = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
-  };
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    // console.log("Form values:", values);
 
+    try{
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      console.log(res.status)
+      if(res.ok){
+        router.push("/thanks")
+      }else{
+        router.push("/404")
+      }
+    }catch(err : any){
+      console.log(err)
+    }
+  };
   return (
     <div className="flex items-center justify-center bg-base-200 py-16">
       <Form {...form}>

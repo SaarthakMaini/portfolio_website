@@ -14,7 +14,7 @@ const routes = [
 
 export default function Navigator() {
   const pathname = usePathname()
-
+  
   const currentIndex = routes.findIndex((r) => r.path === pathname)
   const nextIndex = (currentIndex + 1) % routes.length
   const prevIndex = (currentIndex - 1 + routes.length) % routes.length
@@ -38,7 +38,7 @@ export default function Navigator() {
         </Link>
       )}
 
-      <Link
+      {pathname !== '/thanks' && (<Link
         href={nextRoute.path}
         className="absolute right-6 top-1/2 -translate-y-1/2 flex items-center group
                    bg-neutral-200 hover:bg-neutral-300 text-neutral-700 
@@ -48,7 +48,7 @@ export default function Navigator() {
           {nextRoute.name}
         </span>
         <FaArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
-      </Link>
+      </Link>)}
     </div>
   )
 }

@@ -11,7 +11,7 @@ function Navbar() {
         <Link href="/projects" className="text-black hover:text-blue-700 transition-colors duration-300">Projects</Link>
         <Link href="/blogs" className="text-black hover:text-blue-700 transition-colors duration-300">Blogs</Link>
         <Link href="/contact" className="text-black hover:text-blue-700 transition-colors duration-300">Contact</Link> 
-        <Link href="/skills" className="text-black hover:text-blue-700 transition-colors duration-300">Skills</Link>
+        {/* <Link href="/skills" className="text-black hover:text-blue-700 transition-colors duration-300">Skills</Link> */}
         </div>
     </nav>
   )
