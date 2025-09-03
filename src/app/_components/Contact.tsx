@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useCallback } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -30,7 +30,7 @@ const Contact = () => {
     },
   });
 
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+  const onSubmit = useCallback(async (values: z.infer<typeof formSchema>) => {
     // console.log("Form values:", values);
 
     try{
@@ -50,15 +50,16 @@ const Contact = () => {
     }catch(err : any){
       console.log(err)
     }
-  };
+  }, [router]);
+  
   return (
-    <div className="flex items-center justify-center bg-base-200 py-16">
+    <div className="flex items-center justify-center bg-base-200 py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="flex flex-col space-y-6 w-[650px]"
+          className="flex flex-col space-y-4 sm:space-y-6 w-full max-w-md sm:max-w-lg lg:max-w-xl xl:max-w-2xl"
         >
-          <h1 className="text-5xl font-bold mb-12 text-center">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 lg:mb-12 text-center">
             Work With Saarthak
           </h1>
 
@@ -71,7 +72,9 @@ const Contact = () => {
                   <Input
                     placeholder="Name"
                     {...field}
-                    className="w-full rounded-md border-2 border-black px-5 py-4 text-lg font-semibold placeholder:text-lg placeholder:font-semibold"
+                    className="w-full rounded-md border-2 border-black px-3 sm:px-4 lg:px-5 py-3 sm:py-4 
+                             text-base sm:text-lg font-semibold placeholder:text-base sm:placeholder:text-lg 
+                             placeholder:font-semibold"
                   />
                 </FormControl>
               </FormItem>
@@ -87,7 +90,9 @@ const Contact = () => {
                   <Input
                     placeholder="Email"
                     {...field}
-                    className="w-full rounded-md border-2 border-black px-5 py-4 text-lg font-semibold placeholder:text-lg placeholder:font-semibold"
+                    className="w-full rounded-md border-2 border-black px-3 sm:px-4 lg:px-5 py-3 sm:py-4 
+                             text-base sm:text-lg font-semibold placeholder:text-base sm:placeholder:text-lg 
+                             placeholder:font-semibold"
                   />
                 </FormControl>
               </FormItem>
@@ -103,7 +108,9 @@ const Contact = () => {
                   <Input
                     placeholder="Phone Number"
                     {...field}
-                    className="w-full rounded-md border-2 border-black px-5 py-4 text-lg font-semibold placeholder:text-lg placeholder:font-semibold"
+                    className="w-full rounded-md border-2 border-black px-3 sm:px-4 lg:px-5 py-3 sm:py-4 
+                             text-base sm:text-lg font-semibold placeholder:text-base sm:placeholder:text-lg 
+                             placeholder:font-semibold"
                   />
                 </FormControl>
               </FormItem>
@@ -119,7 +126,9 @@ const Contact = () => {
                   <textarea
                     placeholder="Message"
                     {...field}
-                    className="w-full rounded-md border-2 border-black px-5 py-4 min-h-[150px] text-lg font-semibold placeholder:text-lg placeholder:font-semibold"
+                    className="w-full rounded-md border-2 border-black px-3 sm:px-4 lg:px-5 py-3 sm:py-4 
+                             min-h-[120px] sm:min-h-[150px] text-base sm:text-lg font-semibold 
+                             placeholder:text-base sm:placeholder:text-lg placeholder:font-semibold resize-none"
                   />
                 </FormControl>
               </FormItem>
@@ -128,12 +137,16 @@ const Contact = () => {
 
           <Button
             type="submit"
-            className="w-full hover:bg-neutral-700 rounded-md font-bold text-lg py-4 transition-colors duration-100"
+            className="w-full hover:bg-neutral-700 rounded-md font-bold text-base sm:text-lg py-3 sm:py-4 
+                     transition-colors duration-100"
           >
             Submit
           </Button>
-          <div className="flex justify-center mt-6 scale-140">
-            <SocialMedia />
+          
+          <div className="flex justify-center mt-6 sm:mt-8">
+            <div className="scale-110 sm:scale-125 lg:scale-140">
+              <SocialMedia />
+            </div>
           </div>
         </form>
       </Form>
