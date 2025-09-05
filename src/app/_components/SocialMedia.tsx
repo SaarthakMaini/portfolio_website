@@ -3,7 +3,7 @@ import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 
 function SocialMedia() {
   return (
-    <div className="flex space-x-3 sm:space-x-4 mt-2 sm:mt-0">
+    <div className="flex space-x-3 sm:space-x-4 sm:mt-0">
           <a
             href="https://github.com/SaarthakMaini"
             target="_blank"
