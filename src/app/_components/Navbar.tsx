@@ -24,8 +24,8 @@ function Navbar() {
   }, [])
 
   return (
-    <nav className="shadow-sm border p-4 bg-white">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between">
+    <nav className="shadow-sm border bg-white">
+      <div className="mx-3 flex flex-col sm:flex-row items-center justify-between">
         <div className="flex items-baseline justify-between w-full sm:w-auto">
           <h1 className="text-xl sm:text-2xl lg:text-2xl font-bold">Saarthak Maini</h1>
           <button
