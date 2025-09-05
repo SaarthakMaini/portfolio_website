@@ -53,13 +53,13 @@ const Contact = () => {
   }, [router]);
   
   return (
-    <div className="flex items-center justify-center bg-base-200 sm:py-12 px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center justify-center bg-base-200 py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
           className="flex flex-col space-y-4 sm:space-y-6 w-full max-w-md sm:max-w-lg lg:max-w-xl xl:max-w-2xl"
         >
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 lg:mb-8 text-center">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 lg:mb-12 text-center">
             Work With Saarthak
           </h1>
 
@@ -137,7 +137,7 @@ const Contact = () => {
 
           <Button
             type="submit"
-            className="w-full hover:bg-neutral-700 rounded-md font-bold text-base sm:text-lg py-2 sm:py-4 
+            className="w-full hover:bg-neutral-700 rounded-md font-bold text-base sm:text-lg py-1 sm:py-4 
                      transition-colors duration-100"
           >
             Submit
