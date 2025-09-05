@@ -17,7 +17,7 @@ const MurfEmbed = () => {
       className="murf-embed"
       width="560"
       height="102"
-      src="https://murf.ai/embeds/index.html?embedId=mer03uel"
+      src="https://murf.ai/embeds/index.html?embedId=mer03uel&autoplay=true"
       allowFullScreen
       title="Murf Embed Player"
       style={{ border: "none" }}

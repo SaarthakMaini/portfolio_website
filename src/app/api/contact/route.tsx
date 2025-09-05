@@ -25,7 +25,7 @@ export async function POST(req: Request) {
     });
 
     resend.emails.send({
-      from: 'onboarding@resend.dev',
+      from: 'contact@saarthakmaini.com',
       to: `${body.email}`,
       subject: '📩 Saarthak Has Received Your Message',
       html: userMessage
