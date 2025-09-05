@@ -59,7 +59,7 @@ const Contact = () => {
           onSubmit={form.handleSubmit(onSubmit)}
           className="flex flex-col space-y-4 sm:space-y-6 w-full max-w-md sm:max-w-lg lg:max-w-xl xl:max-w-2xl"
         >
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 lg:mb-12 text-center">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 lg:mb-8 text-center">
             Work With Saarthak
           </h1>
 

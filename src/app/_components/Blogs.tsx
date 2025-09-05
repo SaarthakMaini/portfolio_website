@@ -82,8 +82,8 @@ export default function Blogs() {
   ))
 
   return (
-    <div className="p-4 sm:p-6 lg:p-8 bg-neutral">
-      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 text-center text-neutral-content">
+    <div className="p-4 sm:p-6 lg:p-6 bg-neutral">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 lg:mb-6 text-center text-neutral-content">
         {posts.length > 0 ? `Saarthak's Latest Blogs` : 'Loading...'}
       </h1>
       <div className="grid gap-4 sm:gap-6 md:gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">

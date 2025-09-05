@@ -23,7 +23,7 @@ const projects: Project[] = [
 export default function Projects() {
   return (
     <div className="bg-base-200 py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
-      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-neutral mb-6 sm:mb-8 lg:mb-10">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-neutral mb-6 sm:mb-8 lg:mb-8">
         My Projects
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto">

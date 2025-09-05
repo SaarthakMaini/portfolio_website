@@ -17,7 +17,7 @@ export default function RootLayout({
       </head>
       <body className="flex flex-col min-h-screen">
         <Navbar />
-        <main className="flex-grow px-2 sm:px-4 md:px-6 lg:px-8 pb-16 sm:pb-20">{children}</main>
+        <main className="flex-grow px-2 sm:px-4 md:px-6 lg:px-8 pb-12 sm:pb-16 lg:pb-8">{children}</main>
         <Navigator />
         <Footer />
         <ChatbaseScript />
