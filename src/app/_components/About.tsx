@@ -28,8 +28,8 @@ function About() {
   }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
-      <div className="w-full lg:w-1/2 lg:pr-8 mb-8 lg:mb-0">
+    <div className="flex flex-col lg:flex-row items-center justify-center px-4 sm:px-6 lg:px-32 py-8 lg:py-12">
+      <div className="w-full lg:w-5/8 lg:pr-20 mb-8 lg:mb-0">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 lg:mb-7 text-center lg:text-left">
           Hi, I'm Saarthak
         </h1>
@@ -54,7 +54,7 @@ function About() {
         )}
       </div>
 
-      <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+      <div className="w-full lg:w-3/8 flex justify-center lg:justify-start lg:pl-20">
         <img
           src="/photo.jpg"
           alt="Saarthak Photo"

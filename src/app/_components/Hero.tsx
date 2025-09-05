@@ -4,7 +4,7 @@ import React from 'react'
 
 function Hero() {
   return (
-    <div className="flex justify-center items-center w-full py-8 sm:py-10 px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-center items-center w-full py-8 sm:py-10 px-4 sm:px-6 lg:py-10 lg:px-8">
       <div className="w-full max-w-3xl aspect-video h-full">
         <iframe
           className="w-full h-full rounded-xl shadow-lg"
