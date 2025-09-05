@@ -17,14 +17,14 @@ export async function POST(req: Request) {
 
     const userMessage = `<h1>${body.name}</h1><br /><br /><p>Thank you for showing your interest in working with Saarthak</p><br /><br /><p>Please expect to be reached out within 24-48 hours</p><br/><br/><p>Regards,</p><p>Saarthak Maini</p>`
 
-    resend.emails.send({
+    await resend.emails.send({
       from: 'onboarding@resend.dev',
       to: 'saarthakmaini@gmail.com',
       subject: '📩 Portfolio Website - New Contact Request',
       html: message
     });
 
-    resend.emails.send({
+    await resend.emails.send({
       from: 'contact@saarthakmaini.com',
       to: `${body.email}`,
       subject: '📩 Saarthak Has Received Your Message',
