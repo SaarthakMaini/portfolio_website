@@ -78,15 +78,15 @@ export default function Blogs() {
   }, [])
 
   const skeletonCards = Array.from({ length: 6 }).map((_, i) => (
-    <div key={i} className="card bg-neutral text-neutral-content shadow-lg animate-pulse h-64" />
+    <div key={i} className="card bg-neutral text-neutral-content shadow-lg animate-pulse h-48 sm:h-56 lg:h-64" />
   ))
 
   return (
-    <div className="p-6 bg-neutral min-h-screen">
-      <h1 className="text-4xl font-bold mb-8 text-center text-neutral-content">
+    <div className="p-4 sm:p-6 lg:p-6 bg-neutral">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 lg:mb-6 text-center text-neutral-content">
         {posts.length > 0 ? `Saarthak's Latest Blogs` : 'Loading...'}
       </h1>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:gap-6 md:gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
         {loading
           ? skeletonCards
           : posts.map((post) => (
@@ -95,21 +95,22 @@ export default function Blogs() {
                 href={post.node.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="card bg-neutral text-neutral-content shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="card bg-neutral text-neutral-content shadow-lg hover:shadow-xl transition-shadow duration-300 
+                         hover:scale-[1.02] transition-transform duration-200"
               >
                 {post.node.coverImage?.url && (
                   <figure>
                     <img
                       src={post.node.coverImage.url}
                       alt={post.node.title}
-                      className="rounded-t-lg"
+                      className="rounded-t-lg w-full h-32 sm:h-40 lg:h-48 object-cover"
                       loading="lazy"
                     />
                   </figure>
                 )}
-                <div className="card-body">
-                  <h2 className="card-title text-lg font-bold">{post.node.title}</h2>
-                  <p className="text-sm font-semibold text-neutral-content/80 mt-2">
+                <div className="card-body p-4 sm:p-6">
+                  <h2 className="card-title text-base sm:text-lg lg:text-xl font-bold line-clamp-2">{post.node.title}</h2>
+                  <p className="text-xs sm:text-sm lg:text-base font-semibold text-neutral-content/80 mt-2 line-clamp-3">
                     {post.node.seo.description}
                   </p>
                 </div>

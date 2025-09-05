@@ -119,6 +119,43 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Mobile-first responsive typography */
+  h1 {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+  }
+  
+  h2 {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+  }
+  
+  h3 {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl;
+  }
+  
+  p {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+  
+  /* Mobile-friendly touch targets - only for interactive elements */
+  button:not(.no-touch-target), a:not(.no-touch-target) {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  /* Mobile-friendly form elements */
+  input, textarea, select {
+    @apply text-base sm:text-lg;
+  }
+  
+  /* Mobile-friendly spacing */
+  .container {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Mobile-friendly shadows */
+  .shadow-mobile {
+    @apply shadow-sm sm:shadow-md lg:shadow-lg;
+  }
 }
 
 /* .shimmer-text {
@@ -174,4 +211,87 @@ html {
 
 .animate-pulse-right {
   animation: pulse-right-left 1.5s ease-in-out infinite;
+}
+
+/* Mobile-specific responsive utilities */
+@media (max-width: 640px) {
+  .mobile-hidden {
+    display: none;
+  }
+  
+  .mobile-full {
+    width: 100%;
+  }
+  
+  .mobile-center {
+    text-align: center;
+  }
+  
+  .mobile-text-center {
+    text-align: center;
+  }
+  
+  .mobile-p-2 {
+    padding: 0.5rem;
+  }
+}
+
+/* Tablet-specific responsive utilities */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .tablet-hidden {
+    display: none;
+  }
+  
+  .tablet-text-center {
+    text-align: center;
+  }
+}
+
+/* Desktop-specific responsive utilities */
+@media (min-width: 1025px) {
+  .desktop-hidden {
+    display: none;
+  }
+  
+  .desktop-text-left {
+    text-align: left;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .retina-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .xs-hidden {
+    display: none;
+  }
+  
+  .xs-text-xs {
+    font-size: 0.75rem;
+  }
+  
+  .xs-p-1 {
+    padding: 0.25rem;
+  }
+}
+
+/* Large devices */
+@media (min-width: 1280px) {
+  .xl-text-2xl {
+    font-size: 1.5rem;
+  }
+  
+  .xl-p-8 {
+    padding: 2rem;
+  }
+}
+
+html {
+  font-size: 90%;
 }

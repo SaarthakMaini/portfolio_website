@@ -3,9 +3,11 @@ import { Button } from '@/components/ui/button'
 
 function Resume() {
   return (
-    <div>
+    <div className="w-full sm:w-auto">
       <a href="/resume.pdf" download>
-        <Button>Download Resume</Button>
+        <Button className="w-full sm:w-auto text-sm sm:text-base py-2 sm:py-3 px-4 sm:px-6">
+          Download Resume
+        </Button>
       </a>
     </div>
   )
