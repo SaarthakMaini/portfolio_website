@@ -53,7 +53,7 @@ const Contact = () => {
   }, [router]);
   
   return (
-    <div className="flex items-center justify-center bg-base-200 py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center justify-center bg-base-200 py-4 sm:py-12 px-4 sm:px-6 lg:px-8">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
@@ -137,7 +137,7 @@ const Contact = () => {
 
           <Button
             type="submit"
-            className="w-full hover:bg-neutral-700 rounded-md font-bold text-base sm:text-lg py-1 sm:py-4 
+            className="w-full hover:bg-neutral-700 rounded-md font-bold text-base sm:text-lg sm:py-4 
                      transition-colors duration-100"
           >
             Submit
